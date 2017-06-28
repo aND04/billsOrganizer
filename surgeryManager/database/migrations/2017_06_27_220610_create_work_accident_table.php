@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateWorkAccidentTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('work_accident', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('description');
+            $table->date('accident_date');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('work_accident');
     }
 }
