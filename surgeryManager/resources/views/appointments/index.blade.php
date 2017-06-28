@@ -22,7 +22,7 @@
             <tr>
                 <td> {{ $appointment->id }}                                         </td>
                 <td> {{ date('d-m-Y', strtotime($appointment->appointment_date)) }} </td>
-                <td> TODO                                                           </td>
+                <td> {{ $appointment->patient->name }}                              </td>
                 <td> {{ $appointment->place->name }}                                </td>
                 <td class="text-center btn-width">
                     <a class="btn btn-success btn-xs" href="{{ route('appointments.show', $appointment->id) }}" data-toggle="tooltip" data-placement="top" title={{ __('messages.global.view')}} >

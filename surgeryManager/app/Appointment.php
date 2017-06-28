@@ -12,4 +12,9 @@ class Appointment extends Model
     {
         return $this->belongsTo('App\Place', 'places_id');
     }
+
+    public function patient()
+    {
+        return $this->belongsTo('App\Patient', 'patient_id');
+    }
 }

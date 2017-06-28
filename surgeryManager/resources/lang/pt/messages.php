@@ -11,6 +11,7 @@ return [
 			'dashboard' 	=> 'Painel',
             'surgeries'     => 'Cirurgias',
             'appointments'  => 'Consultas',
+            'patients'      => 'Pacientes',
             'places'        => 'Clínicas',
             'create'        => 'Criar',
             'list'          => 'Listar',
@@ -67,6 +68,30 @@ return [
         ],
         'show'  => [
             'page_title'    => 'Detalhes da Consulta',
+        ],
+    ],
+    'patients' => [
+		'general' => [
+            'name'          => 'Nome',
+            'email'         => 'Email',
+            'phone_number'  => 'Telefone',
+            'patient_name'  => 'Nome do Paciente',
+            'birthday'      => 'Data de Nascimento',
+            'residency'     => 'Residência',
+            'nationality'   => 'Nacionalidade',
+            'profession'    => 'Profissão',
+		],
+		'index' => [
+            'page_title'        => 'Pacientes',
+            'id'                => '#',
+            'last_appointment'  => 'Ultima Consulta',
+            'last_surgery'      => 'Ultima Cirúrgia',
+		],
+        'create' => [
+            'page_title'    => 'Novo Paciente',
+        ],
+        'show'  => [
+            'page_title'    => 'Detalhes do Paciente',
         ],
     ],
 ];

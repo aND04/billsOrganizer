@@ -18,7 +18,7 @@ class CreateAppointmentTable extends Migration
             $table->date('appointment_date');
             $table->string('observations')->nullable();
             $table->integer('places_id');
-            //TODO patient_id
+            $table->integer('patient_id');
             $table->timestamps();
         });
     }

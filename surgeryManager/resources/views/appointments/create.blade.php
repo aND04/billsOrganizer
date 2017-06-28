@@ -8,7 +8,14 @@
         {{ csrf_field() }}
         <div class="form-group ">
             <label> {{ __('messages.appointments.general.patient_name') }} </label>
-            <input class="form-control" id="name" name="name" required="" type="text"/>
+            <select class="form-control" id="name" name="name">
+                @foreach ($patients as $patient)
+                    <option></option>
+                    <option>
+                        {{ $patient->name }}
+                    </option>
+                @endforeach
+            </select>
         </div>
         <div class="form-group ">
             <label> {{ __('messages.appointments.general.description') }} </label>

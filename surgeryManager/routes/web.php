@@ -23,3 +23,8 @@ Route::get('/places', 'PlaceController@index')->name('places');
 Route::get('/places/create', 'PlaceController@create')->name('place.create');
 Route::post('/places', 'PlaceController@store')->name('places.store');
 Route::get('places/{place}', 'PlaceController@show')->name('places.show');
+
+Route::get('/patients', 'PatientController@index')->name('patients');
+Route::get('/patients/create', 'PatientController@create')->name('patients.create');
+Route::post('/patients', 'PatientController@store')->name('patients.store');
+Route::get('patients/{patient}', 'PatientController@show')->name('patients.show');

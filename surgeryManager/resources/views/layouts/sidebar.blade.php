@@ -29,6 +29,17 @@
                 </ul>
             </li>
             <li>
+                <a href="#"><i class="fa fa-desktop"></i> {{ __('messages.main.sidebar.patients') }}</a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ route('patients') }}"> {{ __('messages.main.sidebar.list') }} </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('patients/create') }}"> {{ __('messages.main.sidebar.create') }} </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="#"><i class="fa fa-desktop"></i> {{ __('messages.main.sidebar.places') }}</a>
                 <ul class="nav nav-second-level">
                     <li>

@@ -6,6 +6,7 @@ use App\Appointment;
 use Illuminate\Http\Request;
 
 use App\Place;
+use App\Patient;
 
 class AppointmentController extends Controller
 {
@@ -28,7 +29,8 @@ class AppointmentController extends Controller
     public function create()
     {
         $places = Place::all();
-        return view('appointments.create', compact('places'));
+        $patients = Patient::all();
+        return view('appointments.create', compact('places', 'patients'));
     }
 
     /**
@@ -43,7 +45,8 @@ class AppointmentController extends Controller
             //TODO - patient name from list
             'appointment_date'  => request('date'),
             'observations'      => request('observations'),
-            'places_id'          => Place::where('name', request('place'))->first()->id,
+            'places_id'         => Place::where('name', request('place'))->first()->id,
+            'patient_id'        => Patient::where('name', request('name'))->first()->id,
         ]);
 
         return redirect('/appointments');
