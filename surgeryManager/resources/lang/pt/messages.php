@@ -85,13 +85,37 @@ return [
             'page_title'        => 'Pacientes',
             'id'                => '#',
             'last_appointment'  => 'Ultima Consulta',
-            'last_surgery'      => 'Ultima Cirúrgia',
+            'last_surgery'      => 'Ultima Cirurgia',
 		],
         'create' => [
             'page_title'    => 'Novo Paciente',
         ],
         'show'  => [
             'page_title'    => 'Detalhes do Paciente',
+        ],
+    ],
+    'surgeries' => [
+		'general' => [
+            'date'          => 'Data',
+            'place'         => 'Local',
+            'patient_name'  => 'Nome do Paciente',
+            'complications' => 'Complicações',
+            'type'          => 'Tipo',
+            'code'          => 'Código',
+            'anesthetic'    => 'Anestesia?',
+            'image'         => 'Foto',
+            'local'         => 'Clínica',
+		],
+		'index' => [
+            'page_title'    => 'Cirurgias',
+            'id'            => '#',
+		],
+        'create' => [
+            'page_title'    => 'Nova Cirurgia',
+        ],
+        'show'  => [
+            'page_title'    => 'Detalhes da Cirurgia',
+            'image'         => 'Imagem da Cirurgia',
         ],
     ],
 ];

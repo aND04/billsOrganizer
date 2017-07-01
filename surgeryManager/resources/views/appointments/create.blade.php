@@ -3,7 +3,7 @@
 @section('content')
 
     <h1 class="page-header"> {{ __('messages.appointments.create.page_title')}} </h1>
-<!-- TODO select patient from a list of preexistent patients -->
+    
     <form role="form" action="{{ route('appointments.store') }}" enctype="multipart/form-data" method="POST">
         {{ csrf_field() }}
         <div class="form-group ">

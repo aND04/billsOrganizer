@@ -13,7 +13,7 @@ class CreateSurgeryTable extends Migration
      */
     public function up()
     {
-        Schema::create('surgery', function (Blueprint $table) {
+        Schema::create('surgeries', function (Blueprint $table) {
             $table->increments('id');
             $table->date('surgery_date');
             $table->string('type')->nullable();
@@ -21,6 +21,8 @@ class CreateSurgeryTable extends Migration
             $table->string('complications')->nullable();
             $table->boolean('anesthetic');
             $table->string('image')->nullable();
+            $table->integer('patient_id');
+            $table->integer('place_id');
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ class CreateSurgeryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('surgery');
+        Schema::dropIfExists('surgeries');
     }
 }

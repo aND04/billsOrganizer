@@ -42,7 +42,6 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         Appointment::create([
-            //TODO - patient name from list
             'appointment_date'  => request('date'),
             'observations'      => request('observations'),
             'places_id'         => Place::where('name', request('place'))->first()->id,

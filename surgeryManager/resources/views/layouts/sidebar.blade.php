@@ -21,10 +21,10 @@
                 <a href="#"><i class="fa fa-desktop"></i> {{ __('messages.main.sidebar.surgeries') }}</a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#"> {{ __('messages.main.sidebar.list') }} </a>
+                        <a href="{{ route('surgeries') }}"> {{ __('messages.main.sidebar.list') }} </a>
                     </li>
                     <li>
-                        <a href="#"> {{ __('messages.main.sidebar.create') }} </a>
+                        <a href="{{ url('surgeries/create') }}"> {{ __('messages.main.sidebar.create') }} </a>
                     </li>
                 </ul>
             </li>
