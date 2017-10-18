@@ -46,8 +46,7 @@
     <div class="form-group ">
         <label>{{ __('messages.surgeries.show.image') }}</label>
         <div class="fileupload-new thumbnail" style="max-width: 330px;height: auto;">
-            <img src="{{ Storage::url($surgery->image) }}" alt="">
-            {{-- <img src="{{ URL::asset($surgery->image) }}" alt="" /> --}}
+            <img src="{{ Storage::url($surgery->image)}}" alt="" >
         </div>
     </div>
     @endif
