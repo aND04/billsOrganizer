@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MaterializeModule } from "angular2-materialize";
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
@@ -40,6 +41,7 @@ import { AddSurgeryComponent } from './patient/add-surgery/add-surgery.component
     AddSurgeryComponent,
   ],
   imports: [
+    MaterializeModule,
     BrowserModule
   ],
   providers: [],
